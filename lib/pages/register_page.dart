@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import '../components/button.dart';
 import '../components/text_field.dart';
 
@@ -27,7 +26,6 @@ class _RegisterPageState extends State<RegisterPage> {
         child: CircularProgressIndicator(),
       ),
     );
-
     //make sure passwords match
     if (passwordTextController.text != confirmPasswordTextController.text) {
       //pop loading circle
@@ -42,7 +40,6 @@ class _RegisterPageState extends State<RegisterPage> {
         email: emailTextController.text,
         password: passwordTextController.text,
       );
-
       //pop loading circle
       if (context.mounted) Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
