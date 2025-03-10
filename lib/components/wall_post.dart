@@ -99,7 +99,12 @@ class _WallPostState extends State<WallPost> {
               const SizedBox(
                 height: 10,
               ),
-              Text(widget.message),
+              Text(
+                widget.message,
+                style: TextStyle(
+                  color: Colors.grey[900],
+                ),
+              ),
             ],
           ),
         ],
